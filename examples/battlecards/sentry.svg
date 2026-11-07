@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <title>Sentry battlecard</title>
+  <desc>Top objection: status quo. Answer: Agreed, and I&apos;m not asking you to replace it. The question is whether Sentry tells you which errors cost you signups, and from what you said, it tells you which ones are loudest.</desc>
+  <rect x="4" y="4" width="292" height="412" rx="18" fill="#FFFDF7" stroke="#1F2328" stroke-width="3"/>
+  <rect x="22" y="22" width="256" height="376" rx="10" fill="none" stroke="#B3261E" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="34" y="60" font-size="34" font-weight="700" fill="#B3261E">S</text><text x="35" y="90" font-size="26" fill="#B3261E">♥</text>
+  <g transform="rotate(180 150 210)"><text x="34" y="60" font-size="34" font-weight="700" fill="#B3261E">S</text><text x="35" y="90" font-size="26" fill="#B3261E">♥</text></g>
+  <text x="150" y="152" font-size="72" text-anchor="middle" fill="#B3261E">♥</text>
+  <text x="150" y="200" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2328">Sentry</text>
+  <text x="150" y="224" font-size="11" letter-spacing="1" text-anchor="middle" fill="#1F2328">TOP OBJECTION: STATUS QUO</text>
+  <line x1="70" y1="240" x2="230" y2="240" stroke="#B3261E" stroke-opacity="0.5"/>
+  <text x="150" y="264" font-size="14" text-anchor="middle" fill="#1F2328"><tspan x="150" dy="0">Agreed, and I&apos;m not asking</tspan><tspan x="150" dy="20">you to replace it. The</tspan><tspan x="150" dy="20">question is whether Sentry</tspan><tspan x="150" dy="20">tells you which errors</tspan><tspan x="150" dy="20">cost you signups, and from…</tspan></text>
+</svg>
