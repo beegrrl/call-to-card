@@ -7,6 +7,7 @@ import { anthropicClient, ExtractError } from './extract.js'
 import { run, type RunOptions } from './run.js'
 import { readFileTranscript } from './sources/file.js'
 import { fetchGranolaApiTranscript } from './sources/granola-api.js'
+import { fetchGranolaMcpTranscript } from './sources/granola-mcp.js'
 import { posthogSink } from './telemetry.js'
 import type { Transcript } from './types.js'
 
@@ -47,7 +48,7 @@ async function getTranscript(o: RunOptions): Promise<Transcript> {
     if (!key) fail('Set GRANOLA_API_KEY in .env to use --api')
     return fetchGranolaApiTranscript(o.api, key)
   }
-  fail("Granola MCP sign-in isn't wired up yet; export the transcript and use --file")
+  return fetchGranolaMcpTranscript(o.call as string)
 }
 
 const promptPath = opts.prompt ?? new URL('../prompts/battlecard.md', import.meta.url)
