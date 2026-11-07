@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "tsx src/cli.ts",
     "build": "tsc",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "tsc"
   },
   "engines": {
     "node": ">=20"
@@ -29,5 +30,9 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.1.0"
-  }
+  },
+  "files": [
+    "dist",
+    "prompts"
+  ]
 }

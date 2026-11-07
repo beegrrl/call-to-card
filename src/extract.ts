@@ -7,17 +7,29 @@ export interface ModelClient {
   complete(system: string, user: string): Promise<string>
 }
 
+// Pull the text out of a Claude reply. If the reply hit the length limit,
+// the JSON is incomplete, so say that instead of "didn't fit the format".
+export function textFromMessage(message: {
+  stop_reason: string | null
+  content: { type: string; text?: string }[]
+}): string {
+  if (message.stop_reason === 'max_tokens') {
+    throw new Error("The model's answer was cut off before it finished. Try a shorter call.")
+  }
+  return message.content.map((block) => (block.type === 'text' ? block.text ?? '' : '')).join('')
+}
+
 export function anthropicClient(apiKey: string, model: string): ModelClient {
   const client = new Anthropic({ apiKey })
   return {
     async complete(system, user) {
       const message = await client.messages.create({
         model,
-        max_tokens: 4000,
+        max_tokens: 8000,
         system,
         messages: [{ role: 'user', content: user }],
       })
-      return message.content.map((block) => (block.type === 'text' ? block.text : '')).join('')
+      return textFromMessage(message)
     },
   }
 }

@@ -42,3 +42,16 @@ describe('extractFindings', () => {
     expect(err.responses).toEqual(['oops', 'still oops'])
   })
 })
+
+import { textFromMessage } from '../src/extract.js'
+
+describe('textFromMessage', () => {
+  test('joins the text blocks', () => {
+    expect(textFromMessage({ stop_reason: 'end_turn', content: [{ type: 'text', text: 'a' }, { type: 'text', text: 'b' }] })).toBe('ab')
+  })
+  test('says plainly when the answer was cut off', () => {
+    expect(() => textFromMessage({ stop_reason: 'max_tokens', content: [{ type: 'text', text: '{' }] })).toThrow(
+      "The model's answer was cut off before it finished",
+    )
+  })
+})

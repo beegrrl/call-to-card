@@ -2,6 +2,8 @@
 
 You are reading the transcript of a sales call. Someone on the sales team will use what you write before their next call, maybe the same day. Write for that person.
 
+In Granola transcripts, "Microphone" or "Rep" is the salesperson and "System audio" (or a person's name) is the other side of the call.
+
 ## What to pull out
 
 **Objections.** Every time the prospect pushes back, hesitates, or asks a question that sounds like doubt, that's an objection. Keep the prospect's exact words in `quote`. Do not clean up their grammar. The way they said it is the most useful part.
