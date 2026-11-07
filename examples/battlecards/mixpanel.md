@@ -28,6 +28,14 @@
 - What do you pay today for analytics, replay and flags combined, and how much of the renewal increase is Mixpanel alone?
 - How much time does your team spend matching the same user across three separate tools?
 
+## Sources
+
+Checked against posthog.com on 2026-11-06. The answers above lean on these, and nothing else.
+
+- History import: [Managed migrations](https://posthog.com/docs/migrate/managed-migrations). One year of data per job, events are not deduplicated, and a paid product analytics plan is required. That is the "what can't be imported, in writing" list.
+- Billing limits per product: [Billing limits and alerts](https://posthog.com/docs/billing/limits-alerts). Limits exist for most products and ingestion stops when one is hit. Logs retention is the documented exception.
+- Sending events next to Mixpanel: [Install](https://posthog.com/docs/getting-started/install) and [Send events](https://posthog.com/docs/getting-started/send-events). The docs show the snippet and a capture call; the "small install" line is an estimate, not a doc claim, which is why the card asks for 30 minutes before putting a number on it.
+
 ---
 
 Heard in 1 call, last on 2026-11-06

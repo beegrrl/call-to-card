@@ -29,6 +29,16 @@
 - Of the errors you fixed last quarter, how many moved a conversion or retention number?
 - If an error never spikes in Sentry but quietly blocks signups, how would you catch it today?
 
+## Sources
+
+Checked against posthog.com on 2026-11-06. The answers above lean on these, and nothing else.
+
+- Replay attached to errors: [Error tracking](https://posthog.com/docs/error-tracking) ("every issue comes with the affected user's session replay")
+- No code profiling: [PostHog vs Sentry](https://posthog.com/compare/posthog-vs-sentry) (profiling rows show Sentry only)
+- Flutter: [Error tracking on Flutter](https://posthog.com/docs/error-tracking/installation/flutter) (install guide exists; web and native C/C++ limits listed there)
+- Snowflake export: [Batch exports to Snowflake](https://posthog.com/docs/cdp/batch-exports/snowflake). The docs don't say whether `$exception` events are included, which is why the card promises to confirm it.
+- The gap this card fills: [Observability selling guide](https://posthog.com/handbook/growth/use-case-selling/observability) ("To be added: Sentry / Datadog competitive positioning")
+
 ---
 
 Heard in 1 call, last on 2026-11-06

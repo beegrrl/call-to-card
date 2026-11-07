@@ -24,6 +24,14 @@
 - How would you answer 'what percent of signups finish onboarding' with Google Analytics today, and how long would that take?
 - When you want to fix the drop-off, would it help to watch a session recording of someone getting stuck, in the same tool as the funnel?
 
+## Sources
+
+Checked against posthog.com on 2026-11-06. The answers above lean on these, and nothing else.
+
+- Billing limit on product analytics, capture stops at the cap: [Billing limits and alerts](https://posthog.com/docs/billing/limits-alerts)
+- Free monthly allowance (1M analytics events, no credit card): [Pricing](https://posthog.com/pricing)
+- Snippet plus a few custom events: [Install](https://posthog.com/docs/getting-started/install) and [Send events](https://posthog.com/docs/getting-started/send-events). The docs don't say how long it takes, which is why the card proposes the afternoon as a test rather than a promise.
+
 ---
 
 Heard in 1 call, last on 2026-11-06
