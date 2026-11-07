@@ -27,13 +27,49 @@ describe('file source', () => {
 })
 
 describe('granola api source', () => {
-  test('joins transcript segments as speaker lines', async () => {
-    const t = await fetchGranolaApiTranscript('not_123', 'key', stubFetch(200, [{ speaker: 'Prospect', text: 'hi' }]))
-    expect(t.text).toBe('Prospect: hi')
+  // Answers each URL from a small table, so pagination and the note lookup can be tested.
+  function routes(table: Record<string, [number, unknown]>): typeof fetch & { urls: string[] } {
+    const urls: string[] = []
+    const f = (async (input: string | URL) => {
+      const url = String(input)
+      urls.push(url)
+      const key = Object.keys(table).find((k) => url.includes(k)) ?? ''
+      const [status, body] = table[key] ?? [404, {}]
+      return new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
+    }) as typeof fetch & { urls: string[] }
+    f.urls = urls
+    return f
+  }
+  const seg = (attribution: string | undefined, text: string, name?: string) => ({
+    speaker: { source: attribution === 'me' ? 'microphone' : 'speaker', attribution, name },
+    text,
+    start_time: '2026-11-07T18:00:00Z',
+    end_time: '2026-11-07T18:00:05Z',
+  })
+
+  test('labels the note owner as Rep and everyone else by name or as Prospect', async () => {
+    const f = routes({
+      'transcript?page_size=100': [200, { transcript: [seg('me', 'Hi'), seg('them', 'Hello', 'Dana'), seg('them', 'Hey')], hasMore: false, cursor: null }],
+      '/notes/not_123': [200, { title: 'Acme eval', calendar_event: { scheduled_start_time: '2026-11-07T18:00:00Z' } }],
+    })
+    const t = await fetchGranolaApiTranscript('not_123', 'key', f)
+    expect(t.text).toBe('Rep: Hi\nDana: Hello\nProspect: Hey')
     expect(t.source).toBe('granola-api')
     expect(t.meetingId).toBe('not_123')
+    expect(t.title).toBe('Acme eval')
+    expect(t.date).toBe(new Date('2026-11-07T18:00:00Z').toLocaleDateString('en-CA'))
   })
-  test('throws on a bad status', async () => {
-    await expect(fetchGranolaApiTranscript('not_123', 'key', stubFetch(401, {}))).rejects.toThrow('Granola API returned 401')
+  test('follows the cursor until the last page', async () => {
+    const f = routes({
+      'cursor=abc': [200, { transcript: [seg('them', 'page two')], hasMore: false, cursor: null }],
+      'transcript?page_size=100': [200, { transcript: [seg('me', 'page one')], hasMore: true, cursor: 'abc' }],
+      '/notes/not_123': [200, { title: null, calendar_event: null, created_at: '2026-11-07T18:00:00Z' }],
+    })
+    const t = await fetchGranolaApiTranscript('not_123', 'key', f)
+    expect(t.text).toBe('Rep: page one\nProspect: page two')
+  })
+  test('explains a rejected key in plain words', async () => {
+    const f = routes({ transcript: [401, {}] })
+    await expect(fetchGranolaApiTranscript('not_123', 'key', f)).rejects.toThrow('Granola rejected the API key (401)')
   })
 })
