@@ -1,0 +1,37 @@
+{
+  "competitor": "Mixpanel",
+  "objections": [
+    {
+      "quote": "We've got three years of events in Mixpanel. What does moving all that actually cost us?",
+      "theme": "migration cost",
+      "repSaid": "We have a migration guide.",
+      "betterAnswer": "Ask what they actually query from those three years. Most teams look at the last 90 days. Import what matters, start fresh on the rest, and run both for a sprint."
+    },
+    {
+      "quote": "Our event names are a mess. Do we have to clean that up first?",
+      "theme": "event schema",
+      "repSaid": null,
+      "betterAnswer": "No. Migrate as is, then fix the names that matter once you can see which ones people use."
+    },
+    {
+      "quote": "I can't tell what we'd pay once we add replay and flags.",
+      "theme": "pricing",
+      "repSaid": "It's usage based.",
+      "betterAnswer": "Open the pricing calculator with them on the call and plug in their real volumes. Most teams land inside the free tier on at least one product."
+    }
+  ],
+  "talkTrack": {
+    "topic": "switching from Mixpanel",
+    "opener": "Most teams that switch from Mixpanel are not unhappy with analytics. They are tired of paying for five tools that do not talk to each other.",
+    "discoveryQuestions": [
+      "Which Mixpanel reports does your team open every week?",
+      "How far back do those reports actually look?",
+      "What else do you pay for next to Mixpanel today?",
+      "Who owns event naming right now?",
+      "What would make a two-week trial a success for you?"
+    ],
+    "proofPoints": [
+      "The prospect said they already pay separately for session replay and feature flags."
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "call-to-card",
+  "version": "0.1.0",
+  "description": "Turn a recorded sales call into a battlecard, a talk track and a running objection log.",
+  "type": "module",
+  "bin": {
+    "call-to-card": "dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Melissa Thorne",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "commander": "^15.0.0",
+    "dotenv": "^18.0.9",
+    "posthog-node": "^5.63.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
