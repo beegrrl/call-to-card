@@ -6,6 +6,7 @@ import { slugify } from './slug.js'
 import { sendObjections, type EventSink } from './telemetry.js'
 import type { CallFindings, Transcript } from './types.js'
 import { appendBattlecardCall, renderBattlecard } from './write/battlecard.js'
+import { renderCardSvg } from './write/card-art.js'
 import { writeOrAppend } from './write/files.js'
 import { isProcessed, updateObjectionLog } from './write/objections.js'
 import { appendTalkTrackCall, renderTalkTrack } from './write/talktrack.js'
@@ -69,6 +70,13 @@ export async function run(
     const how = await writeOrAppend(path, () => renderBattlecard(f), (e) => appendBattlecardCall(e, f))
     deps.log(`${how}  ${path}`)
     written.push(path)
+
+    // The card art is drawn once. After that it's yours to redraw.
+    const art = join(o.out, 'battlecards', `${slugify(f.competitor)}.svg`)
+    if ((await writeOrAppend(art, () => renderCardSvg(f), (e) => e)) === 'created') {
+      deps.log(`created  ${art}`)
+      written.push(art)
+    }
   }
 
   const trackPath = join(o.out, 'talk-tracks', `${slugify(f.talkTrack.topic)}.md`)

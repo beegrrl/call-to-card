@@ -1,3 +1,4 @@
+import { slugify } from '../slug.js'
 import type { CallFindings } from '../types.js'
 import { bullets, callLabel, callMarker, objectionLines } from './shared.js'
 
@@ -10,6 +11,8 @@ export function renderBattlecard(f: CallFindings): string {
     f.flipQuestions.length > 0 ? `## Questions that flip it\n\n${bullets(f.flipQuestions)}\n\n` : ''
 
   return `# ${f.competitor}
+
+![${f.competitor} card](${slugify(f.competitor ?? 'unknown')}.svg)
 
 ## What they say
 
