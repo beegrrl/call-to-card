@@ -15,7 +15,6 @@ I'm not here to replace Sentry. You already have errors and product data in two 
 
 ## What they told us
 
-- Dana has about 15 minutes for the call.
 - Her team already uses PostHog for analytics and replay, and Sentry for errors.
 - Sentry works and nobody on her team complains about it.
 - They fix whatever is loudest: if an error spikes in Sentry they look at it, otherwise it sits.
