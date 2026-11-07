@@ -37,6 +37,7 @@ export type ModelFindings = z.infer<typeof ModelFindingsSchema>
 // What the model found, plus the facts about the call we already knew.
 export type CallFindings = ModelFindings & {
   call: {
+    id: string // the meeting ID, or a fingerprint of the transcript text
     date: string | null
     source: SourceKind
     meetingId: string | null

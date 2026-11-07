@@ -54,6 +54,35 @@ describe('run', () => {
     )
     expect(await readdir(out)).toHaveLength(0)
   })
+  test('running the same call again skips everything, including the model', async () => {
+    const out = await tempOut()
+    await run({ file: 'x.txt', out, telemetry: true }, deps())
+    const d = deps()
+    let modelCalls = 0
+    d.client = { complete: async () => { modelCalls++; return JSON.stringify(fixture) } }
+    const second = await run({ file: 'x.txt', out, telemetry: true }, d)
+    expect(second.skipped).toBe(true)
+    expect(modelCalls).toBe(0)
+    expect(d.captured).toBe(0)
+    const card = await readFile(join(out, 'battlecards', 'mixpanel.md'), 'utf8')
+    expect(card).not.toContain('## From the')
+  })
+  test('--force reruns, but only new objections become events', async () => {
+    const out = await tempOut()
+    await run({ file: 'x.txt', out, telemetry: true }, deps())
+    const changed = structuredClone(fixture)
+    changed.objections[2].theme = 'price'
+    const d = deps(changed)
+    const second = await run({ file: 'x.txt', out, telemetry: true, force: true }, d)
+    expect(second.events).toBe(1)
+    expect(d.captured).toBe(1)
+  })
+  test('different text in a file with the same name counts as a different call', async () => {
+    const out = await tempOut()
+    await run({ file: 'call.txt', out, telemetry: true }, deps())
+    const second = await run({ file: 'call.txt', out, telemetry: true }, deps(fixture, longText + ' extra words here'))
+    expect(second.skipped).toBe(false)
+  })
   test('telemetry off sends nothing', async () => {
     const out = await tempOut()
     const d = deps()
