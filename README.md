@@ -4,7 +4,9 @@ call-to-card turns sales-call transcripts into draft battlecards, talk tracks, a
 
 [BRIEF.md](BRIEF.md) explains why I built it and how I'd use it at PostHog to make what we learn on one call useful on the next.
 
-[Watch a 2 minute run](https://youtu.be/0nPxr9ubKjQ): one Granola call in, a Sentry battlecard out.
+[![1 call = 1 card: watch a 2 minute run](docs/thumbnail.png)](https://youtu.be/0nPxr9ubKjQ)
+
+[Watch the 2 minute run](https://youtu.be/0nPxr9ubKjQ): one Granola call in, a Sentry battlecard out.
 
 ## What you get
 
