@@ -13,9 +13,9 @@
 ## What we say
 
 - **too many products**: No, and most teams don't. You want one thing, a funnel on your onboarding steps, so ignore the rest of the site until you have a question that funnel can't answer.
-- **pricing**: Fair, and 'scales with you' isn't an answer. Tell me roughly how many users you expect on launch day and I'll show you the bill at that volume. Then we set a billing limit on each product before launch. Capture stops at the cap, so we pick that number together.
-- **setup time**: Plan on an afternoon. Add the snippet, send 3 or 4 onboarding events, and build the funnel in the UI with no extra engineering. If events aren't showing up by the end of the day, tell me and we'll fix it together.
-- **free alternative**: Keep Google Analytics for marketing traffic, it's good at that. It's weak at following a signed-in user through onboarding steps, which is your question. PostHog also has a free monthly allowance, and 3 or 4 tracked steps will likely sit inside it, so we can check that math together.
+- **pricing**: Fair, and 'scales with you' isn't an answer. Tell me roughly how many users you expect on launch day and I'll show you the bill at that volume. Then we set a billing limit on product analytics before launch. When you hit it, event capture stops until the next month, so we pick that number together.
+- **setup time**: Let's test the afternoon instead of me promising it. Add the snippet, send 3 or 4 onboarding events, and build the funnel in the UI. If the funnel isn't showing real users by the end of the day, tell me, and we either fix it together or you walk.
+- **free alternative**: Keep Google Analytics for marketing traffic, it's good at that. Your question is about a signed-in user moving through onboarding steps, which is the thing product analytics is built for. PostHog has a free monthly allowance; give me your expected signups and I'll check whether a 4-step funnel stays inside it before you spend anything.
 
 ## Questions that flip it
 

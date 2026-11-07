@@ -1,33 +1,35 @@
 # Objection log
 
+From 4 role-played calls, so the counts show the workflow, not what the market says. Answers in the Log table are the model's drafts as generated. The reviewed answers are on the battlecards; where they differ, the card wins.
+
 <!-- counts:start -->
-| Theme | Count | Last heard | Example quote |
-|---|---|---|---|
-| pricing | 5 | 2026-11-06 | "That's exactly what scares me. Scales with me means it scales up when I least expect it." |
-| history migration | 2 | 2026-11-06 | "Straightforward how? 3 years is a lot of data and I don't want to find out halfway through that half of it didn't come over." |
-| team ramp | 2 | 2026-11-06 | "Everyone says that." |
-| ai fixes | 1 | 2026-11-06 | "Sentry's AI already proposes fixes and opens pull requests for us, why would I move?" |
-| data duplication | 1 | 2026-11-06 | "But we already have Snowflake, why would we put data anywhere else? I don't want another copy of everything." |
-| data warehouse | 1 | 2026-11-06 | "Our data team is also going to ask whether all of this ends up in Snowflake." |
-| dbt metrics | 1 | 2026-11-06 | "How does that work with the dbt models we already trust? We spent 2 years getting our metric definitions right." |
-| engineering time | 1 | 2026-11-06 | "I don't have an engineer to spare for a month." |
-| event cleanup | 1 | 2026-11-06 | "our event names are a mess. 5 people named things 5 different ways over 3 years. Do we have to clean all that up before we move?" |
-| flutter support | 1 | 2026-11-06 | "our mobile app is in Flutter, I'm not sure you even support it." |
-| free alternative | 1 | 2026-11-06 | "why not just use the free version of something simpler? Google Analytics is free." |
-| profiling | 1 | 2026-11-06 | "We also lean on Sentry's profiling a lot, do you have that?" |
-| relevance | 1 | 2026-11-06 | "Everything we have lives in Snowflake and dbt, so I'm not sure why I'm on this call" |
-| replay overlap | 1 | 2026-11-06 | "But Sentry already shows me a replay attached to the error, so what's actually different?" |
-| setup time | 1 | 2026-11-06 | "we're 2 engineers, it has to take an afternoon, not a sprint." |
-| source of truth | 1 | 2026-11-06 | "Should,  I need better than should. My team owns metric definitions. I don't want a second source of truth that disagrees with ours." |
-| status quo | 1 | 2026-11-06 | "Sentry works, nobody on my team complains about it." |
-| too many products | 1 | 2026-11-06 | "there are like 10 products on your site. Do I need all of this? I just want to know if people finish onboarding." |
-| warehouse compute | 1 | 2026-11-06 | "And who pays for the warehouse compute if PostHog is querying Snowflake all day?" |
+| Theme | Mentions | Calls | Last heard | Example quote |
+|---|---|---|---|---|
+| pricing | 5 | 3 | 2026-11-06 | "That's exactly what scares me. Scales with me means it scales up when I least expect it." |
+| history migration | 2 | 1 | 2026-11-06 | "Straightforward how? 3 years is a lot of data and I don't want to find out halfway through that half of it didn't come over." |
+| team ramp | 2 | 1 | 2026-11-06 | "Everyone says that." |
+| ai fixes | 1 | 1 | 2026-11-06 | "Sentry's AI already proposes fixes and opens pull requests for us, why would I move?" |
+| data duplication | 1 | 1 | 2026-11-06 | "But we already have Snowflake, why would we put data anywhere else? I don't want another copy of everything." |
+| data warehouse | 1 | 1 | 2026-11-06 | "Our data team is also going to ask whether all of this ends up in Snowflake." |
+| dbt metrics | 1 | 1 | 2026-11-06 | "How does that work with the dbt models we already trust? We spent 2 years getting our metric definitions right." |
+| engineering time | 1 | 1 | 2026-11-06 | "I don't have an engineer to spare for a month." |
+| event cleanup | 1 | 1 | 2026-11-06 | "our event names are a mess. 5 people named things 5 different ways over 3 years. Do we have to clean all that up before we move?" |
+| flutter support | 1 | 1 | 2026-11-06 | "our mobile app is in Flutter, I'm not sure you even support it." |
+| free alternative | 1 | 1 | 2026-11-06 | "why not just use the free version of something simpler? Google Analytics is free." |
+| profiling | 1 | 1 | 2026-11-06 | "We also lean on Sentry's profiling a lot, do you have that?" |
+| relevance | 1 | 1 | 2026-11-06 | "Everything we have lives in Snowflake and dbt, so I'm not sure why I'm on this call" |
+| replay overlap | 1 | 1 | 2026-11-06 | "But Sentry already shows me a replay attached to the error, so what's actually different?" |
+| setup time | 1 | 1 | 2026-11-06 | "we're 2 engineers, it has to take an afternoon, not a sprint." |
+| source of truth | 1 | 1 | 2026-11-06 | "Should,  I need better than should. My team owns metric definitions. I don't want a second source of truth that disagrees with ours." |
+| status quo | 1 | 1 | 2026-11-06 | "Sentry works, nobody on my team complains about it." |
+| too many products | 1 | 1 | 2026-11-06 | "there are like 10 products on your site. Do I need all of this? I just want to know if people finish onboarding." |
+| warehouse compute | 1 | 1 | 2026-11-06 | "And who pays for the warehouse compute if PostHog is querying Snowflake all day?" |
 <!-- processed: 7955511b-3f84-4641-8eaf-1fcb7528c4ab, b2a6c3e3-94a7-4107-967f-69a977a5000f, b9f61712-8abf-48c5-8b53-abf81deb4a8d, ad1ccf6a-556d-4c6d-98f0-5aa312b58e86 -->
 <!-- counts:end -->
 
 ## Log
 
-| Date | Call | Competitor | Theme | Quote | Better answer |
+| Date | Call | Competitor | Theme | Quote | Draft answer (as generated) |
 |---|---|---|---|---|---|
 | 2026-11-06 | Mock Eval: Keep Sentry or switch? | Sentry | status quo | "Sentry works, nobody on my team complains about it." | Agreed, and I'm not asking you to replace it. The question is whether Sentry tells you which errors cost you signups, and from what you said, it tells you which ones are loudest. |
 | 2026-11-06 | Mock Eval: Keep Sentry or switch? | Sentry | replay overlap | "But Sentry already shows me a replay attached to the error, so what's actually different?" | You're right, a replay on an error is table stakes and Sentry does it well. What Sentry can't show you is how many people hit that error mid-signup and never came back, and that's what decides what you fix first. |

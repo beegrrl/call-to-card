@@ -13,10 +13,10 @@ function logRows(md: string): string[] {
   return table.slice(2)
 }
 
-function countFor(md: string, theme: string): string | undefined {
+function countFor(md: string, theme: string, column: 'mentions' | 'calls' = 'mentions'): string | undefined {
   const counts = md.split('<!-- counts:start -->')[1].split('<!-- counts:end -->')[0]
   const row = counts.split('\n').find((l) => l.startsWith(`| ${theme} |`))
-  return row?.split('|')[2].trim()
+  return row?.split('|')[column === 'mentions' ? 2 : 3].trim()
 }
 
 const secondCall = callFindings({
@@ -49,6 +49,14 @@ describe('objection log', () => {
     const { text, added } = updateObjectionLog(null, f)
     expect(added).toHaveLength(4)
     expect(countFor(text, 'pricing')).toBe('2')
+    expect(countFor(text, 'pricing', 'calls')).toBe('1')
+  })
+  test('counts calls separately from mentions across calls', () => {
+    const f = callFindings()
+    f.objections.push({ quote: 'And per seat?', theme: 'pricing', repSaid: null, betterAnswer: 'No seats.' })
+    const { text } = updateObjectionLog(updateObjectionLog(null, f).text, secondCall)
+    expect(countFor(text, 'pricing')).toBe('3')
+    expect(countFor(text, 'pricing', 'calls')).toBe('2')
   })
   test('a forced rerun with identical output adds nothing', () => {
     const once = updateObjectionLog(null, callFindings()).text

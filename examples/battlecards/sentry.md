@@ -15,7 +15,7 @@
 ## What we say
 
 - **status quo**: Agreed, and I'm not asking you to replace it. The question is whether Sentry tells you which errors cost you signups, and from what you said, it tells you which ones are loudest.
-- **replay overlap**: You're right, a replay on an error is table stakes and Sentry does it well. What Sentry can't show you is how many people hit that error mid-signup and never came back, and that's what decides what you fix first.
+- **replay overlap**: Yes, Sentry has replay, and it does it well. Since you already use PostHog for analytics, let's test whether seeing errors next to your signup funnel makes it easier to decide what to fix first. If it doesn't, you keep Sentry and we've both learned something.
 - **ai fixes**: That's a real strength, so keep it. Use PostHog to decide which errors are worth sending to it.
 - **profiling**: No, we don't do code profiling, and Sentry is the right tool for that. So the real question is whether you need Sentry for profiling only, or for error triage too.
 - **pricing**: You'll likely pay for both for a while, so I won't promise savings up front. Give me your monthly error volume and I'll send you a real cost estimate in writing today, so you have a number for finance before the trial starts.

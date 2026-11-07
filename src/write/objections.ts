@@ -76,12 +76,15 @@ function later(a: string, b: string): boolean {
 }
 
 function countsBlock(rows: Row[], processed: string[]): string {
-  const byTheme = new Map<string, { count: number; last: string; quote: string }>()
+  // Mentions and calls are different facts. The same worry raised three
+  // times on one call is one call; the chart should not call it three.
+  const byTheme = new Map<string, { count: number; calls: Set<string>; last: string; quote: string }>()
   for (const r of rows) {
     const seen = byTheme.get(r.theme)
-    if (!seen) byTheme.set(r.theme, { count: 1, last: r.date, quote: r.quote })
+    if (!seen) byTheme.set(r.theme, { count: 1, calls: new Set([r.call]), last: r.date, quote: r.quote })
     else {
       seen.count += 1
+      seen.calls.add(r.call)
       if (later(r.date, seen.last)) {
         seen.last = r.date
         seen.quote = r.quote
@@ -89,11 +92,13 @@ function countsBlock(rows: Row[], processed: string[]): string {
     }
   }
   const sorted = [...byTheme.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]))
-  const body = sorted.map(([theme, s]) => `| ${theme} | ${s.count} | ${s.last} | ${scrub(s.quote)} |`).join('\n')
+  const body = sorted
+    .map(([theme, s]) => `| ${theme} | ${s.count} | ${s.calls.size} | ${s.last} | ${scrub(s.quote)} |`)
+    .join('\n')
   return [
     COUNTS_START,
-    '| Theme | Count | Last heard | Example quote |',
-    '|---|---|---|---|',
+    '| Theme | Mentions | Calls | Last heard | Example quote |',
+    '|---|---|---|---|---|',
     body,
     `<!-- processed: ${processed.join(', ')} -->`,
     COUNTS_END,
