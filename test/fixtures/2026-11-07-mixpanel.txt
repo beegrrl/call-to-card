@@ -1,0 +1,2 @@
+Rep: Thanks for making time. Where are you today with product analytics?
+Prospect: We are on Mixpanel. Three years of events in there.
