@@ -22,6 +22,10 @@ describe('parseFindings', () => {
   test('finds the JSON inside code fences and a sentence of preamble', () => {
     expect(parseFindings(fenced)).toEqual(fixture)
   })
+  test('ignores braces in the prose around the JSON', () => {
+    const json = JSON.stringify(fixture)
+    expect(parseFindings(`Here is the {shape} you asked for: ${json} Hope that helps {thanks}`)).toEqual(fixture)
+  })
   test('rejects text with no JSON in it', () => {
     expect(() => parseFindings('sorry, no')).toThrow()
   })

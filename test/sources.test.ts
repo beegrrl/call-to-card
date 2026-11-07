@@ -26,6 +26,20 @@ describe('file source', () => {
   })
 })
 
+describe('file source without a date in the name', () => {
+  test("uses the file's modified date", async () => {
+    const { mkdtemp, writeFile, utimes } = await import('node:fs/promises')
+    const { tmpdir } = await import('node:os')
+    const { join } = await import('node:path')
+    const dir = await mkdtemp(join(tmpdir(), 'ctc-file-'))
+    const path = join(dir, 'acme-call.txt')
+    await writeFile(path, 'hi')
+    const when = new Date('2026-10-30T18:00:00Z')
+    await utimes(path, when, when)
+    expect((await readFileTranscript(path)).date).toBe(when.toLocaleDateString('en-CA'))
+  })
+})
+
 describe('granola api source', () => {
   // Answers each URL from a small table, so pagination and the note lookup can be tested.
   function routes(table: Record<string, [number, unknown]>): typeof fetch & { urls: string[] } {

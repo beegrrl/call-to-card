@@ -23,3 +23,9 @@ describe('types', () => {
     expect(ModelFindingsSchema.parse(fixture)).toBeTruthy()
   })
 })
+
+describe('scrub keeps lines apart', () => {
+  test('a dash at the start of a line becomes a bullet instead of joining lines', () => {
+    expect(scrub('- one\n— two')).toBe('- one\n- two')
+  })
+})

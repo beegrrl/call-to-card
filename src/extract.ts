@@ -49,13 +49,43 @@ const SHAPE = `{
   "talkTrack": { "topic": string, "opener": string, "discoveryQuestions": [4 to 6 strings], "proofPoints": [strings] }
 }`
 
-// Models sometimes wrap JSON in code fences or add a sentence first.
-// Take everything from the first { to the last } and check it.
+// Models sometimes wrap JSON in code fences, or put a sentence (maybe with
+// its own curly braces) before or after it. Try a fenced block first, then
+// every "{" in turn, matching braces while skipping over strings, and keep
+// the first one that is valid JSON in the right shape.
 export function parseFindings(raw: string): ModelFindings {
-  const start = raw.indexOf('{')
-  const end = raw.lastIndexOf('}')
-  if (start === -1 || end <= start) throw new SyntaxError('No JSON object in the response')
-  return ModelFindingsSchema.parse(JSON.parse(raw.slice(start, end + 1)))
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1]
+  const candidates = [...(fenced ? [fenced] : []), ...objectCandidates(raw)]
+  let lastError: unknown = new SyntaxError('No JSON object in the response')
+  for (const text of candidates) {
+    try {
+      return ModelFindingsSchema.parse(JSON.parse(text))
+    } catch (err) {
+      lastError = err
+    }
+  }
+  throw lastError
+}
+
+function objectCandidates(raw: string): string[] {
+  const found: string[] = []
+  for (let start = raw.indexOf('{'); start !== -1; start = raw.indexOf('{', start + 1)) {
+    let depth = 0
+    let inString = false
+    for (let i = start; i < raw.length; i++) {
+      const ch = raw[i]
+      if (inString) {
+        if (ch === '\\') i++
+        else if (ch === '"') inString = false
+      } else if (ch === '"') inString = true
+      else if (ch === '{') depth++
+      else if (ch === '}' && --depth === 0) {
+        found.push(raw.slice(start, i + 1))
+        break
+      }
+    }
+  }
+  return found
 }
 
 export async function extractFindings(t: Transcript, client: ModelClient, promptText: string): Promise<ModelFindings> {

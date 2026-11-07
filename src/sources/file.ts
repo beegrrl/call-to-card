@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises'
+import { readFile, stat } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
 import type { Transcript } from '../types.js'
 
@@ -7,6 +7,7 @@ import type { Transcript } from '../types.js'
 export async function readFileTranscript(path: string): Promise<Transcript> {
   const text = await readFile(path, 'utf8')
   const title = basename(path, extname(path))
-  const date = title.match(/\d{4}-\d{2}-\d{2}/)?.[0] ?? null
+  // A date in the filename wins; otherwise use when the file was last saved.
+  const date = title.match(/\d{4}-\d{2}-\d{2}/)?.[0] ?? (await stat(path)).mtime.toLocaleDateString('en-CA')
   return { text, source: 'file', meetingId: null, date, title }
 }

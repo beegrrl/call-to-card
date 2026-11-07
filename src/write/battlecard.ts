@@ -1,5 +1,5 @@
 import type { CallFindings } from '../types.js'
-import { bullets, callLabel, objectionLines } from './shared.js'
+import { bullets, callLabel, callMarker, objectionLines } from './shared.js'
 
 // A first draft of a battlecard for one competitor. The section names are
 // a starting point; whoever owns the card should make them their own.
@@ -27,11 +27,13 @@ ${proof}
 ---
 
 Heard in 1 call, last on ${callLabel(f)}
+${callMarker(f)}
 `
 }
 
 // When the card already exists, never rewrite it. Add this call's objections
 // at the bottom and let a person fold them in.
 export function appendBattlecardCall(existing: string, f: CallFindings): string {
-  return `${existing}\n\n## From the ${callLabel(f)} call\n\n${objectionLines(f)}\n`
+  if (existing.includes(callMarker(f))) return existing
+  return `${existing}\n\n## From the ${callLabel(f)} call\n${callMarker(f)}\n\n${objectionLines(f)}\n`
 }

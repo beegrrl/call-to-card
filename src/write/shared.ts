@@ -15,3 +15,8 @@ export function objectionLines(f: CallFindings): string {
     .map((o) => `- **${o.theme}**: "${o.quote}"\n  - Say: ${o.betterAnswer}`)
     .join('\n')
 }
+
+// A hidden marker so the same call is never added to a card twice.
+export function callMarker(f: CallFindings): string {
+  return `<!-- call:${f.call.id} -->`
+}

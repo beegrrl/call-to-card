@@ -10,6 +10,7 @@ import { callFindings } from './helpers.js'
 
 describe('slugify', () => {
   test('lowercases and hyphenates', () => expect(slugify('Google Analytics')).toBe('google-analytics'))
+  test('a name with no usable letters becomes "unknown"', () => expect(slugify('日本')).toBe('unknown'))
   test('collapses and trims odd characters', () => expect(slugify('  Amplitude (Growth) ')).toBe('amplitude-growth'))
 })
 
@@ -18,6 +19,12 @@ describe('battlecard', () => {
     const md = renderBattlecard(callFindings())
     expect(md).toContain('# Mixpanel')
     expect(md).toContain('Heard in 1 call, last on 2026-11-07')
+  })
+  test('the same call is never appended twice, even without the objection log', () => {
+    const f = callFindings()
+    const once = appendBattlecardCall(renderBattlecard(f), f)
+    expect(appendBattlecardCall(once, f)).toBe(once)
+    expect(appendTalkTrackCall(appendTalkTrackCall('# T\n', f), f)).toBe(appendTalkTrackCall('# T\n', f))
   })
   test('appending leaves hand-edited text exactly as it was', () => {
     const existing = '# Mixpanel\n\nMy own notes — with a dash I chose to keep.\n'

@@ -9,7 +9,7 @@ export async function writeOrAppend(
   path: string,
   render: () => string,
   append: (existing: string) => string,
-): Promise<'created' | 'appended'> {
+): Promise<'created' | 'appended' | 'unchanged'> {
   await mkdir(dirname(path), { recursive: true })
 
   let existing: string | null = null
@@ -25,6 +25,7 @@ export async function writeOrAppend(
   }
 
   const updated = append(existing)
+  if (updated === existing) return 'unchanged'
   if (!updated.startsWith(existing)) throw new Error(`Refusing to rewrite ${path}: append changed existing text`)
   await writeFile(path, existing + scrub(updated.slice(existing.length)))
   return 'appended'
