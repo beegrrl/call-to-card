@@ -13,8 +13,7 @@
 ## What we say
 
 - **too many products**: No, and most teams don't. You want one thing, a funnel on your onboarding steps, so ignore the rest of the site until you have a question that funnel can't answer.
-- **pricing**: Fair worry, and you can control it. You can set a billing limit on each product so you never pay past the number you pick. The tradeoff is that capture stops if you hit the cap, so let's estimate your Product Hunt traffic now and set it before launch.
-- **pricing**: You're right, 'scales with you' is not an answer. Let's put a number on it: roughly how many users and events do you expect on launch day? I'll show you the bill at that volume and how to cap it, so you can see the worst case today.
+- **pricing**: Fair, and 'scales with you' isn't an answer. Tell me roughly how many users you expect on launch day and I'll show you the bill at that volume. Then we set a billing limit on each product before launch. Capture stops at the cap, so we pick that number together.
 - **setup time**: Plan on an afternoon. Add the snippet, send 3 or 4 onboarding events, and build the funnel in the UI with no extra engineering. If events aren't showing up by the end of the day, tell me and we'll fix it together.
 - **free alternative**: Keep Google Analytics for marketing traffic, it's good at that. It's weak at following a signed-in user through onboarding steps, which is your question. PostHog also has a free monthly allowance, and 3 or 4 tracked steps will likely sit inside it, so we can check that math together.
 

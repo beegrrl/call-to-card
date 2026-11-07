@@ -15,13 +15,10 @@
 
 ## What we say
 
-- **history migration**: You don't lose it, because Mixpanel stays live while we run side by side, so nothing disappears on day one. I'll get you in writing exactly what history we can import, and we'll check monthly event counts against Mixpanel so you know it all came over.
-- **history migration**: That's the right worry, so here's how we avoid it: import the history, then compare event counts by month against Mixpanel before you switch anything off. I'll send the exact steps and what can't be imported, so there are no surprises halfway through.
+- **history migration**: You don't lose it. Mixpanel stays live while we run side by side, we import the history, and we compare event counts by month before you switch anything off. I'll send the exact steps and what can't be imported, in writing.
 - **event cleanup**: No, you don't have to clean it up first, but the mess comes with you. I'd pick the 10 or so events behind your Monday dashboards, name those properly going forward, and leave the rest alone.
-- **team ramp**: Your team will be slower for the first couple of weeks, that's normal with any new tool. That's why we run both side by side: your Monday dashboards keep running in Mixpanel until the PostHog versions match.
-- **team ramp**: You're right, so don't take my word for it. Have your team rebuild one Monday dashboard in PostHog during the overlap, and you'll know within a week whether it works for them.
-- **pricing**: Let's put a number on it. Give me your monthly events and the sessions you'd record, and I'll send an estimate for analytics, replay and flags separately, so you can compare it with what you pay for those three tools today.
-- **pricing**: You'll have a number before you talk to your CFO, and you can set a billing limit on each product so the bill can't go past what you've approved. I'll send the estimate with a low case and a high case.
+- **team ramp**: Your team will be slower for a couple of weeks, so don't take my word for it. Have them rebuild one Monday dashboard in PostHog while Mixpanel keeps running, and you'll know within a week.
+- **pricing**: You'll have a number before you talk to your CFO. Give me your monthly events and the sessions you'd record, and I'll send an estimate for analytics, replay and flags with a low and a high case. You can also set a billing limit on each product so the bill can't pass what you approved.
 - **engineering time**: You won't need a month of engineering. Sending events alongside Mixpanel is a small install, and your product team can rebuild the dashboards themselves. I'll give you an hours estimate for the engineering part before you commit.
 
 ## Questions that flip it
