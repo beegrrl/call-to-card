@@ -1,13 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="504" viewBox="0 0 360 504" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <title>Sentry battlecard</title>
-  <desc>Top objection: status quo. Answer: Agreed, and I&apos;m not asking you to replace it. The question is whether Sentry tells you which errors cost you signups, and from what you said, it tells you which ones are loudest.</desc>
-  <rect x="4" y="4" width="292" height="412" rx="18" fill="#FFFDF7" stroke="#1F2328" stroke-width="3"/>
-  <rect x="22" y="22" width="256" height="376" rx="10" fill="none" stroke="#B3261E" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="34" y="60" font-size="34" font-weight="700" fill="#B3261E">S</text><text x="35" y="90" font-size="26" fill="#B3261E">♥</text>
-  <g transform="rotate(180 150 210)"><text x="34" y="60" font-size="34" font-weight="700" fill="#B3261E">S</text><text x="35" y="90" font-size="26" fill="#B3261E">♥</text></g>
-  <text x="150" y="152" font-size="72" text-anchor="middle" fill="#B3261E">♥</text>
-  <text x="150" y="200" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2328">Sentry</text>
-  <text x="150" y="224" font-size="11" letter-spacing="1" text-anchor="middle" fill="#1F2328">TOP OBJECTION: STATUS QUO</text>
-  <line x1="70" y1="240" x2="230" y2="240" stroke="#B3261E" stroke-opacity="0.5"/>
-  <text x="150" y="264" font-size="14" text-anchor="middle" fill="#1F2328"><tspan x="150" dy="0">Agreed, and I&apos;m not asking</tspan><tspan x="150" dy="20">you to replace it. The</tspan><tspan x="150" dy="20">question is whether Sentry</tspan><tspan x="150" dy="20">tells you which errors…</tspan></text>
+  <desc>Sentry: 7 objections on the 2026-11-06 call. Top objection: status quo.</desc>
+  <rect x="3" y="3" width="354" height="498" rx="20" fill="#3F6B2A"/>
+  <rect x="14" y="14" width="332" height="476" rx="12" fill="#FFFDF7"/>
+  <!-- header -->
+  <text x="30" y="55" font-size="26" font-weight="700" fill="#1F2328">Sentry</text>
+  <text x="330" y="31" font-size="8.5" letter-spacing="1.2" text-anchor="end" fill="#5A5F66">THREAT</text>
+  <circle cx="277" cy="46" r="4.5" fill="#3F6B2A"/><circle cx="289" cy="46" r="4.5" fill="#3F6B2A"/><circle cx="301" cy="46" r="4.5" fill="#3F6B2A"/><circle cx="313" cy="46" r="4.5" fill="#3F6B2A"/><circle cx="325" cy="46" r="4.5" fill="#3F6B2A"/>
+  <!-- art slot -->
+  <rect x="30" y="70" width="300" height="160" rx="8" fill="#E2EEDA" stroke="#3F6B2A" stroke-opacity="0.4"/>
+  <g id="art"><line x1="153" y1="170" x2="149" y2="192" stroke="#3F6B2A" stroke-width="5" stroke-linecap="round"/><line x1="207" y1="170" x2="211" y2="192" stroke="#3F6B2A" stroke-width="5" stroke-linecap="round"/><ellipse cx="180" cy="150" rx="37" ry="26" fill="#3F6B2A"/><circle cx="180" cy="141.33333333333334" r="10" fill="#FFFDF7"/><circle cx="182" cy="142.33333333333334" r="4.166666666666667" fill="#1F2328"/><path d="M172 160.4 q 8 6 16 0" fill="none" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round"/></g>
+  <text x="30" y="250" font-size="10" letter-spacing="1" fill="#5A5F66">COMPETITOR · HEARD IN 1 CALL · 2026-11-06</text>
+  <!-- moves -->
+  <line x1="30" y1="262" x2="330" y2="262" stroke="#3F6B2A" stroke-opacity="0.5"/>
+  <text x="30" y="279" font-size="9" letter-spacing="1.2" font-weight="700" fill="#3F6B2A">MOVES</text>
+  <text x="30" y="294" font-size="12.5" font-weight="700" fill="#1F2328">status quo</text>
+  <text x="30" y="309" font-size="11.5" fill="#5A5F66">"Sentry works, nobody on my team complains…"</text>
+  <text x="30" y="328" font-size="12.5" font-weight="700" fill="#1F2328">replay overlap</text>
+  <text x="30" y="343" font-size="11.5" fill="#5A5F66">"But Sentry already shows me a replay attached…"</text>
+  <text x="30" y="362" font-size="12.5" font-weight="700" fill="#1F2328">ai fixes</text>
+  <text x="30" y="377" font-size="11.5" fill="#5A5F66">"Sentry&apos;s AI already proposes fixes and opens…"</text>
+  <!-- weak to -->
+  <line x1="30" y1="398" x2="330" y2="398" stroke="#3F6B2A" stroke-opacity="0.5"/>
+  <text x="30" y="415" font-size="9" letter-spacing="1.2" font-weight="700" fill="#3F6B2A">WEAK TO</text>
+  <text x="30" y="431" font-size="11.5" fill="#1F2328"><tspan x="30" dy="0">When Sentry flags an error, how do you find out</tspan><tspan x="30" dy="15">how many signups or paying users it actually hit?</tspan></text>
+  <!-- flavor -->
+  <text x="30" y="462" font-size="10.5" font-style="italic" fill="#5A5F66"><tspan x="30" dy="0">&quot;Sentry works, nobody on my team complains about</tspan><tspan x="30" dy="14">it.&quot;</tspan></text>
+  <text x="330" y="484" font-size="7.5" letter-spacing="1" text-anchor="end" fill="#5A5F66">call-to-card</text>
 </svg>

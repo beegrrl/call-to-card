@@ -1,13 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="504" viewBox="0 0 360 504" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <title>Google Analytics battlecard</title>
-  <desc>Top objection: too many products. Answer: No, and most teams don&apos;t. You want one thing, a funnel on your onboarding steps, so ignore the rest of the site until you have a question that funnel can&apos;t answer.</desc>
-  <rect x="4" y="4" width="292" height="412" rx="18" fill="#FFFDF7" stroke="#1F2328" stroke-width="3"/>
-  <rect x="22" y="22" width="256" height="376" rx="10" fill="none" stroke="#1F2328" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="34" y="60" font-size="34" font-weight="700" fill="#1F2328">G</text><text x="35" y="90" font-size="26" fill="#1F2328">♣</text>
-  <g transform="rotate(180 150 210)"><text x="34" y="60" font-size="34" font-weight="700" fill="#1F2328">G</text><text x="35" y="90" font-size="26" fill="#1F2328">♣</text></g>
-  <text x="150" y="152" font-size="72" text-anchor="middle" fill="#1F2328">♣</text>
-  <text x="150" y="200" font-size="20" font-weight="700" text-anchor="middle" fill="#1F2328">Google Analytics</text>
-  <text x="150" y="224" font-size="11" letter-spacing="1" text-anchor="middle" fill="#1F2328">TOP OBJECTION: TOO MANY PRODUCTS</text>
-  <line x1="70" y1="240" x2="230" y2="240" stroke="#1F2328" stroke-opacity="0.5"/>
-  <text x="150" y="264" font-size="14" text-anchor="middle" fill="#1F2328"><tspan x="150" dy="0">No, and most teams don&apos;t.</tspan><tspan x="150" dy="20">You want one thing, a</tspan><tspan x="150" dy="20">funnel on your onboarding</tspan><tspan x="150" dy="20">steps, so ignore the rest…</tspan></text>
+  <desc>Google Analytics: 5 objections on the 2026-11-06 call. Top objection: too many products.</desc>
+  <rect x="3" y="3" width="354" height="498" rx="20" fill="#1F6B6B"/>
+  <rect x="14" y="14" width="332" height="476" rx="12" fill="#FFFDF7"/>
+  <!-- header -->
+  <text x="30" y="55" font-size="22" font-weight="700" fill="#1F2328">Google Analytics</text>
+  <text x="330" y="31" font-size="8.5" letter-spacing="1.2" text-anchor="end" fill="#5A5F66">THREAT</text>
+  <circle cx="277" cy="46" r="4.5" fill="#1F6B6B"/><circle cx="289" cy="46" r="4.5" fill="#1F6B6B"/><circle cx="301" cy="46" r="4.5" fill="#1F6B6B"/><circle cx="313" cy="46" r="4.5" fill="#1F6B6B"/><circle cx="325" cy="46" r="4.5" fill="none" stroke="#1F6B6B" stroke-width="1.5"/>
+  <!-- art slot -->
+  <rect x="30" y="70" width="300" height="160" rx="8" fill="#D9EDED" stroke="#1F6B6B" stroke-opacity="0.4"/>
+  <g id="art"><line x1="153" y1="176" x2="149" y2="198" stroke="#1F6B6B" stroke-width="5" stroke-linecap="round"/><line x1="207" y1="176" x2="211" y2="198" stroke="#1F6B6B" stroke-width="5" stroke-linecap="round"/><ellipse cx="180" cy="150" rx="37" ry="32" fill="#1F6B6B"/><circle cx="164" cy="139.33333333333334" r="7" fill="#FFFDF7"/><circle cx="166" cy="140.33333333333334" r="2.916666666666667" fill="#1F2328"/><circle cx="196" cy="139.33333333333334" r="7" fill="#FFFDF7"/><circle cx="198" cy="140.33333333333334" r="2.916666666666667" fill="#1F2328"/><path d="M172 162.8 q 8 6 16 0" fill="none" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round"/></g>
+  <text x="30" y="250" font-size="10" letter-spacing="1" fill="#5A5F66">COMPETITOR · HEARD IN 1 CALL · 2026-11-06</text>
+  <!-- moves -->
+  <line x1="30" y1="262" x2="330" y2="262" stroke="#1F6B6B" stroke-opacity="0.5"/>
+  <text x="30" y="279" font-size="9" letter-spacing="1.2" font-weight="700" fill="#1F6B6B">MOVES</text>
+  <text x="30" y="294" font-size="12.5" font-weight="700" fill="#1F2328">too many products</text>
+  <text x="30" y="309" font-size="11.5" fill="#5A5F66">"there are like 10 products on your site. Do I…"</text>
+  <text x="30" y="328" font-size="12.5" font-weight="700" fill="#1F2328">pricing</text>
+  <text x="30" y="343" font-size="11.5" fill="#5A5F66">"How do I know I won&apos;t get a surprise bill?…"</text>
+  <text x="30" y="362" font-size="12.5" font-weight="700" fill="#1F2328">setup time</text>
+  <text x="30" y="377" font-size="11.5" fill="#5A5F66">"we&apos;re 2 engineers, it has to take an…"</text>
+  <!-- weak to -->
+  <line x1="30" y1="398" x2="330" y2="398" stroke="#1F6B6B" stroke-opacity="0.5"/>
+  <text x="30" y="415" font-size="9" letter-spacing="1.2" font-weight="700" fill="#1F6B6B">WEAK TO</text>
+  <text x="30" y="431" font-size="11.5" fill="#1F2328"><tspan x="30" dy="0">When someone signs up from a marketing page, can</tspan><tspan x="30" dy="15">you see in Google Analytics what that same person…</tspan></text>
+  <!-- flavor -->
+  <text x="30" y="462" font-size="10.5" font-style="italic" fill="#5A5F66"><tspan x="30" dy="0">&quot;there are like 10 products on your site. Do I need</tspan><tspan x="30" dy="14">all of this? I just want to know if people finish…</tspan></text>
+  <text x="330" y="484" font-size="7.5" letter-spacing="1" text-anchor="end" fill="#5A5F66">call-to-card</text>
 </svg>

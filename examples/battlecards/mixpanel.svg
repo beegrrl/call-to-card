@@ -1,13 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="504" viewBox="0 0 360 504" role="img" font-family="'Atkinson Hyperlegible', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <title>Mixpanel battlecard</title>
-  <desc>Top objection: history migration. Answer: You don&apos;t lose it, because Mixpanel stays live while we run side by side, so nothing disappears on day one. I&apos;ll get you in writing exactly what history we can import, and we&apos;ll check monthly event counts against Mixpanel so you know it all came over.</desc>
-  <rect x="4" y="4" width="292" height="412" rx="18" fill="#FFFDF7" stroke="#1F2328" stroke-width="3"/>
-  <rect x="22" y="22" width="256" height="376" rx="10" fill="none" stroke="#1F2328" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="34" y="60" font-size="34" font-weight="700" fill="#1F2328">M</text><text x="35" y="90" font-size="26" fill="#1F2328">♠</text>
-  <g transform="rotate(180 150 210)"><text x="34" y="60" font-size="34" font-weight="700" fill="#1F2328">M</text><text x="35" y="90" font-size="26" fill="#1F2328">♠</text></g>
-  <text x="150" y="152" font-size="72" text-anchor="middle" fill="#1F2328">♠</text>
-  <text x="150" y="200" font-size="26" font-weight="700" text-anchor="middle" fill="#1F2328">Mixpanel</text>
-  <text x="150" y="224" font-size="11" letter-spacing="1" text-anchor="middle" fill="#1F2328">TOP OBJECTION: HISTORY MIGRATION</text>
-  <line x1="70" y1="240" x2="230" y2="240" stroke="#1F2328" stroke-opacity="0.5"/>
-  <text x="150" y="264" font-size="14" text-anchor="middle" fill="#1F2328"><tspan x="150" dy="0">You don&apos;t lose it, because</tspan><tspan x="150" dy="20">Mixpanel stays live while</tspan><tspan x="150" dy="20">we run side by side, so</tspan><tspan x="150" dy="20">nothing disappears on day…</tspan></text>
+  <desc>Mixpanel: 8 objections on the 2026-11-06 call. Top objection: history migration.</desc>
+  <rect x="3" y="3" width="354" height="498" rx="20" fill="#2F3F8F"/>
+  <rect x="14" y="14" width="332" height="476" rx="12" fill="#FFFDF7"/>
+  <!-- header -->
+  <text x="30" y="55" font-size="26" font-weight="700" fill="#1F2328">Mixpanel</text>
+  <text x="330" y="31" font-size="8.5" letter-spacing="1.2" text-anchor="end" fill="#5A5F66">THREAT</text>
+  <circle cx="277" cy="46" r="4.5" fill="#2F3F8F"/><circle cx="289" cy="46" r="4.5" fill="#2F3F8F"/><circle cx="301" cy="46" r="4.5" fill="#2F3F8F"/><circle cx="313" cy="46" r="4.5" fill="#2F3F8F"/><circle cx="325" cy="46" r="4.5" fill="#2F3F8F"/>
+  <!-- art slot -->
+  <rect x="30" y="70" width="300" height="160" rx="8" fill="#DEE2F5" stroke="#2F3F8F" stroke-opacity="0.4"/>
+  <g id="art"><line x1="157" y1="173" x2="153" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><line x1="166.2" y1="173" x2="162.2" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><line x1="175.4" y1="173" x2="171.4" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><line x1="184.6" y1="173" x2="188.6" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><line x1="193.8" y1="173" x2="197.8" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><line x1="203" y1="173" x2="207" y2="195" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><path d="M209 154 q 26 -6 22 -28" fill="none" stroke="#2F3F8F" stroke-width="5" stroke-linecap="round"/><ellipse cx="180" cy="150" rx="33" ry="29" fill="#2F3F8F"/><path d="M164 125 l 6 -16 l 6 12 l 6 -18 l 6 14 l 6 -12 l -2 22 z" fill="#2F3F8F"/><circle cx="164" cy="140.33333333333334" r="7" fill="#FFFDF7"/><circle cx="166" cy="141.33333333333334" r="2.916666666666667" fill="#1F2328"/><circle cx="180" cy="140.33333333333334" r="7" fill="#FFFDF7"/><circle cx="182" cy="141.33333333333334" r="2.916666666666667" fill="#1F2328"/><circle cx="196" cy="140.33333333333334" r="7" fill="#FFFDF7"/><circle cx="198" cy="141.33333333333334" r="2.916666666666667" fill="#1F2328"/><path d="M172 161.6 q 8 6 16 0" fill="none" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round"/></g>
+  <text x="30" y="250" font-size="10" letter-spacing="1" fill="#5A5F66">COMPETITOR · HEARD IN 1 CALL · 2026-11-06</text>
+  <!-- moves -->
+  <line x1="30" y1="262" x2="330" y2="262" stroke="#2F3F8F" stroke-opacity="0.5"/>
+  <text x="30" y="279" font-size="9" letter-spacing="1.2" font-weight="700" fill="#2F3F8F">MOVES</text>
+  <text x="30" y="294" font-size="12.5" font-weight="700" fill="#1F2328">history migration</text>
+  <text x="30" y="309" font-size="11.5" fill="#5A5F66">"we have 3 years of event history in Mixpanel…"</text>
+  <text x="30" y="328" font-size="12.5" font-weight="700" fill="#1F2328">event cleanup</text>
+  <text x="30" y="343" font-size="11.5" fill="#5A5F66">"our event names are a mess. 5 people named…"</text>
+  <text x="30" y="362" font-size="12.5" font-weight="700" fill="#1F2328">team ramp</text>
+  <text x="30" y="377" font-size="11.5" fill="#5A5F66">"My team also knows Mixpanel really well. How…"</text>
+  <!-- weak to -->
+  <line x1="30" y1="398" x2="330" y2="398" stroke="#2F3F8F" stroke-opacity="0.5"/>
+  <text x="30" y="415" font-size="9" letter-spacing="1.2" font-weight="700" fill="#2F3F8F">WEAK TO</text>
+  <text x="30" y="431" font-size="11.5" fill="#1F2328"><tspan x="30" dy="0">When a funnel drops, how do you get from the chart</tspan><tspan x="30" dy="15">to the replays of the users who dropped off today…</tspan></text>
+  <!-- flavor -->
+  <text x="30" y="462" font-size="10.5" font-style="italic" fill="#5A5F66"><tspan x="30" dy="0">&quot;we have 3 years of event history in Mixpanel. What</tspan><tspan x="30" dy="14">happens to that? Do we lose it?&quot;</tspan></text>
+  <text x="330" y="484" font-size="7.5" letter-spacing="1" text-anchor="end" fill="#5A5F66">call-to-card</text>
 </svg>
