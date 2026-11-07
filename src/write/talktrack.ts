@@ -7,7 +7,7 @@ function capitalize(s: string): string {
 
 export function renderTalkTrack(f: CallFindings): string {
   const t = f.talkTrack
-  const proof = t.proofPoints.length > 0 ? bullets(t.proofPoints) : 'Nothing from this call yet.'
+  const facts = t.buyerFacts.length > 0 ? bullets(t.buyerFacts) : 'Nothing from this call yet.'
 
   return `# ${capitalize(t.topic)}
 
@@ -19,9 +19,9 @@ ${t.opener}
 
 ${bullets(t.discoveryQuestions)}
 
-## Back it up
+## What they told us
 
-${proof}
+${facts}
 
 ---
 

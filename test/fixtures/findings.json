@@ -30,8 +30,12 @@
       "Who owns event naming right now?",
       "What would make a two-week trial a success for you?"
     ],
-    "proofPoints": [
+    "buyerFacts": [
       "The prospect said they already pay separately for session replay and feature flags."
     ]
-  }
+  },
+  "flipQuestions": [
+    "Which Mixpanel reports would you miss if they disappeared tomorrow?",
+    "How many tools do you open to answer one question about a user?"
+  ]
 }

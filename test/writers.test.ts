@@ -11,7 +11,27 @@ import { callFindings } from './helpers.js'
 describe('slugify', () => {
   test('lowercases and hyphenates', () => expect(slugify('Google Analytics')).toBe('google-analytics'))
   test('a name with no usable letters becomes "unknown"', () => expect(slugify('日本')).toBe('unknown'))
+  test('long topics become short file names, cut at a word', () => {
+    const slug = slugify('Adding PostHog error tracking next to an existing Sentry setup for a mobile team')
+    expect(slug.length).toBeLessThanOrEqual(50)
+    expect(slug.endsWith('-')).toBe(false)
+    expect(slug.startsWith('adding-posthog-error-tracking')).toBe(true)
+  })
   test('collapses and trims odd characters', () => expect(slugify('  Amplitude (Growth) ')).toBe('amplitude-growth'))
+})
+
+describe('battlecard shape', () => {
+  test('uses competitor-specific flip questions, not the talk track questions', () => {
+    const md = renderBattlecard(callFindings())
+    expect(md).toContain('Which Mixpanel reports would you miss if they disappeared tomorrow?')
+    expect(md).not.toContain('What would make a two-week trial a success for you?')
+  })
+  test('has no proof section, because a call is not proof', () => {
+    expect(renderBattlecard(callFindings())).not.toContain('## Proof')
+  })
+  test('skips the flip questions heading when there are none', () => {
+    expect(renderBattlecard(callFindings({ flipQuestions: [] }))).not.toContain('## Questions that flip it')
+  })
 })
 
 describe('battlecard', () => {
@@ -39,6 +59,11 @@ describe('talk track', () => {
     const md = renderTalkTrack(callFindings())
     expect(md).toContain('# Switching from Mixpanel')
     expect(md).toContain('Which Mixpanel reports does your team open every week?')
+  })
+  test('lists what the buyer told us', () => {
+    const md = renderTalkTrack(callFindings())
+    expect(md).toContain('## What they told us')
+    expect(md).toContain('The prospect said they already pay separately for session replay and feature flags.')
   })
   test('appending keeps existing text', () => {
     const existing = '# Switching from Mixpanel\n\nedited\n'

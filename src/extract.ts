@@ -46,7 +46,8 @@ export class ExtractError extends Error {
 const SHAPE = `{
   "competitor": string or null,
   "objections": [{ "quote": string, "theme": string, "repSaid": string or null, "betterAnswer": string }],
-  "talkTrack": { "topic": string, "opener": string, "discoveryQuestions": [4 to 6 strings], "proofPoints": [strings] }
+  "flipQuestions": [0 to 4 strings],
+  "talkTrack": { "topic": string, "opener": string, "discoveryQuestions": [4 to 6 strings], "buyerFacts": [strings] }
 }`
 
 // Models sometimes wrap JSON in code fences, or put a sentence (maybe with

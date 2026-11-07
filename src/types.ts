@@ -24,11 +24,14 @@ export const ModelFindingsSchema = z.object({
       betterAnswer: z.string().min(1),
     }),
   ),
+  // Questions aimed at this competitor. Empty when no competitor came up.
+  flipQuestions: z.array(z.string().min(1)).max(4),
   talkTrack: z.object({
     topic: z.string().min(1),
     opener: z.string().min(1),
     discoveryQuestions: z.array(z.string().min(1)).min(4).max(6),
-    proofPoints: z.array(z.string()),
+    // What the buyer said about their own situation. Never the rep's claims.
+    buyerFacts: z.array(z.string()),
   }),
 })
 
