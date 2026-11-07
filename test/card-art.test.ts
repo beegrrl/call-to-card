@@ -26,7 +26,7 @@ describe('playing card art', () => {
     f.objections[0].betterAnswer = Array.from({ length: 80 }, () => 'word').join(' ')
     const lines = renderCardSvg(f).match(/<tspan/g) ?? []
     expect(lines.length).toBeGreaterThan(2)
-    expect(lines.length).toBeLessThanOrEqual(7)
+    expect(lines.length).toBeLessThanOrEqual(4)
   })
   test('has no em or en dashes', () => {
     const f = callFindings()

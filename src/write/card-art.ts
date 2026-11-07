@@ -34,7 +34,7 @@ function esc(text: string): string {
 
 // Wrap text into lines of about `width` characters, keeping at most `max`
 // lines and ending with an ellipsis if there's more.
-function wrap(text: string, width = 26, max = 5): string[] {
+function wrap(text: string, width = 26, max = 4): string[] {
   const lines: string[] = []
   let line = ''
   for (const word of text.split(/\s+/).filter(Boolean)) {
