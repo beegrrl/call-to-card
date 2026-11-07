@@ -30,7 +30,7 @@ A person opens the markdown, fixes what the model got wrong, and ships it. On th
 - The prompt file, with notes on why each instruction exists, and the 2 revisions I made after reading what the first version produced
 - 4 example outputs from role-played evaluation calls, including PostHog against Mixpanel and against Sentry
 - Illustrated cards for each competitor, drawn from the call, next to the full answers in markdown
-- A 2 minute recording of a run, start to finish
+- A [2 minute recording](https://youtu.be/0nPxr9ubKjQ) of a run, start to finish
 
 ## What it does not do
 
