@@ -96,4 +96,4 @@ I'd keep PostHog's context-layer positioning, but make the competitive pitch mor
 
 ---
 
-Melissa Thorne · [beegrrl.github.io](https://beegrrl.github.io) · [LinkedIn](https://linkedin.com/in/beegirl) · MIT license
+Melissa Thorne · [portfolio](https://beegrrl.github.io) · [LinkedIn](https://linkedin.com/in/beegirl) · MIT license
