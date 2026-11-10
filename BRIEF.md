@@ -40,6 +40,8 @@ It does not replace the person deciding what the company wants to say, whoever t
 
 A Granola webhook so the first draft is in Slack before the rep is off the call. A step that reads the live handbook so new output never contradicts what is already published. After that, a weekly digest that ranks objections by count, and a way for a rep to flag "this answer did not work" so the battlecard learns from losses and not only from calls.
 
+The one I would move up the list came from asking someone on the customer side what reps run out of time for. Buyers keep asking what the best practice is and what companies like theirs track, and a call with a set agenda rarely has room for the answer. So the tool would tag each call with the buyer's industry and stage, then write a short "what teams like yours ask about" section from the calls already in the log. The rep gets something to send before the call. Marketing gets a list of the questions worth answering in public.
+
 ## Why it exists
 
 I built this to get an interview. PostHog's application asks for a recent AI project that supported a sales team, and I would rather answer that with a repo than a paragraph.
