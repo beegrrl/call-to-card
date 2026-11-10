@@ -88,6 +88,7 @@ I'd keep PostHog's context-layer positioning, but make the competitive pitch mor
 
 ## What's next
 
+- A “what teams like yours ask about” section, built from the industry and stage of each logged call, so a rep can send it before the call instead of running out of time on it.
 - A Granola webhook, so a card appears a few minutes after the call ends instead of when someone remembers to run it.
 - Read the live handbook, so "what we say" cites the page it came from.
 - A weekly digest from the PostHog events: which objections are climbing, which competitor is showing up more.
