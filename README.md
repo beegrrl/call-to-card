@@ -2,7 +2,7 @@
 
 call-to-card turns sales-call transcripts into draft battlecards, talk tracks, and a running objection log for PMMs and sales teams.
 
-[BRIEF.md](BRIEF.md) explains why I built it and how I'd use it at PostHog to make what we learn on one call useful on the next.
+[BRIEF.md](BRIEF.md) explains why I built it and how I'd use it at PostHog to make what we learn on one call useful on the next. The [case study](https://beegrrl.github.io/call-to-card.html) is the short version.
 
 [![1 call = 1 card: watch a 2 minute run](docs/thumbnail.png)](https://youtu.be/0nPxr9ubKjQ)
 
@@ -96,4 +96,4 @@ I'd keep PostHog's context-layer positioning, but make the competitive pitch mor
 
 ---
 
-Melissa Thorne · [portfolio](https://beegrrl.github.io) · [LinkedIn](https://linkedin.com/in/beegirl) · MIT license
+Melissa Thorne · [case study](https://beegrrl.github.io/call-to-card.html) · [portfolio](https://beegrrl.github.io) · [LinkedIn](https://linkedin.com/in/beegirl) · MIT license
