@@ -2,7 +2,7 @@
 
 call-to-card turns sales-call transcripts into draft battlecards, talk tracks, and a running objection log for PMMs and sales teams.
 
-[BRIEF.md](BRIEF.md) explains why I built it and how I'd use it at PostHog to make what we learn on one call useful on the next. The [case study](https://beegrrl.github.io/call-to-card.html) is the short version.
+[BRIEF.md](BRIEF.md) explains why I built it and how I'd use it to make what a team learns on one call useful on the next. The [case study](https://beegrrl.github.io/call-to-card.html) is the short version.
 
 [![1 call = 1 card: watch a 2 minute run](docs/thumbnail.png)](https://youtu.be/0nPxr9ubKjQ)
 
@@ -60,7 +60,7 @@ v3 came out of reviewing the example cards. The evidence rule only covered buyer
 
 ## Examples
 
-Four role-played calls, recorded in Granola with a scripted buyer. The raw model output and my edits are separate commits, so the diff shows what the tool got wrong.
+Four role-played calls, recorded in Granola with a scripted buyer. PostHog is the seller in all four. Its handbook and comparison pages are public, so each card lists the pages that back its answers. The raw model output and my edits are separate commits, so the diff shows what the tool got wrong.
 
 | Call | Competitor | Battlecard | Talk track |
 |---|---|---|---|

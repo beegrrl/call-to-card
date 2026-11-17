@@ -42,9 +42,7 @@ A Granola webhook so the first draft is in Slack before the rep is off the call.
 
 The one I would move up the list came from asking someone on the customer side what reps run out of time for. Buyers keep asking what the best practice is and what companies like theirs track, and a call with a set agenda rarely has room for the answer. So the tool would tag each call with the buyer's industry and stage, then write a short "what teams like yours ask about" section from the calls already in the log. The rep gets something to send before the call. Marketing gets a list of the questions worth answering in public.
 
-## Why it exists
-
-I built this to get an interview. PostHog's application asks for a recent AI project that supported a sales team, and I would rather answer that with a repo than a paragraph.
+## How I built it
 
 I built it with Claude as a pair programmer and kept the scope to one useful loop: a call, a draft, a review, and something the next rep can use. The commits show where the first output failed and what I changed. Every decision about what a battlecard should contain, what the voice should sound like, and what to cut is mine. I gave myself 2 days and used about 4 hours, in one evening. The list above of what I would build next is the rest. It goes a lot faster with real call recordings and a handbook I am allowed to edit.
 
